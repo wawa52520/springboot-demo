@@ -1,0 +1,15 @@
+server:
+  port: 8089
+
+spring:
+  profiles:
+    active: dev
+
+# MyBatis
+mybatis:
+  typeAliasesPackage: com.garben.**.entity
+
+  mapperLocations: classpath*:mapper/*Mapper.xml
+
+#  configLocation: classpath*:mybatis/mybatis-config.xml
+
