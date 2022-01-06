@@ -16,7 +16,7 @@ mybatis:
 
 logging:
   level:
-    com.garben.springbootdemo: debug
+    com.garben: debug
     springbootDemo: debug
 
 

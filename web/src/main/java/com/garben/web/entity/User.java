@@ -1,4 +1,4 @@
-package com.graben.springbootdemo.entity;
+package com.garben.web.entity;
 import java.io.Serializable;
 
 /**

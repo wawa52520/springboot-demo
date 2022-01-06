@@ -1,6 +1,6 @@
-package com.graben.springbootdemo.mapper;
+package com.garben.web.mapper;
 
-import com.graben.springbootdemo.entity.User;
+import com.garben.web.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
