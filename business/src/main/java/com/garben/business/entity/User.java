@@ -1,4 +1,4 @@
-package com.garben.web.entity;
+package com.garben.business.entity;
 import java.io.Serializable;
 
 /**
@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @Author: yaojiabin
  * @Modified By:
  */
-public class User  implements Serializable {
+public class User implements Serializable {
 
 	private static final long serialVersionUID =  6096747853030946043L;
 
