@@ -1,42 +1,19 @@
 package com.garben.web.controller;
 
-import com.garben.business.entity.User;
-import com.garben.business.service.UserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/user")
-@Lazy(value = false)
-public class UserController {
-
-    public UserController() {
-        System.out.println("userController初始化成功！");
-    }
-
-    @Autowired
-    private UserService userService;
-
-    @RequestMapping("getUser/{id}")
-    @ResponseBody
-    public ModelAndView GetUser(@PathVariable int id){
-        User user = userService.findUserById(id);
-        ModelAndView mv = new ModelAndView();
-        mv.addObject("user",user);
-        mv.setViewName("/user/show.html");
-        return mv;
-    }
-
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    @ResponseBody
-    public String defaultLogin() {
-        return "index";
+public class LoginController {
+    @RequestMapping("/login")
+    public String login(){
+        return "login";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -67,6 +44,5 @@ public class UserController {
             return "登录失败";
         }
     }
-
 
 }

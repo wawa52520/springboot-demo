@@ -15,7 +15,9 @@ spring:
 #    prefix: classpath:/templates
     servlet:
       content-type: text/html
-
+#      全局懒加载
+  main:
+    lazy-initialization: true
 
 # MyBatis
 mybatis:
