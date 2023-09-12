@@ -27,9 +27,8 @@ spring:
     virtual-host: /
 
 # MyBatis
-mybatis:
+mybatis-plus:
   typeAliasesPackage: com.garben.**.entity
-
   mapperLocations: classpath*:mapper/*Mapper.xml
 
 #  configLocation: classpath*:mybatis/mybatis-config.xml

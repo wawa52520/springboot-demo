@@ -1,6 +1,6 @@
 package com.garben.web.controller;
 
-import com.garben.business.entity.User;
+import com.garben.business.entity.SysUser;
 import com.garben.business.service.UserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
@@ -26,9 +26,9 @@ public class UserController {
     @RequestMapping("getUser/{id}")
     @ResponseBody
     public ModelAndView GetUser(@PathVariable int id){
-        User user = userService.findUserById(id);
+        SysUser sysUser = userService.findUserById(id);
         ModelAndView mv = new ModelAndView();
-        mv.addObject("user",user);
+        mv.addObject("user", sysUser);
         mv.setViewName("/user/show.html");
         return mv;
     }
